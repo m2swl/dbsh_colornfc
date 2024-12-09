@@ -3,14 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Reality Viewer</title>
+    <title>AR Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8e1;
+            color: #5d4037;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d84315;
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .button {
+            display: block;
+            background-color: #ffab91;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 10px auto;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff7043;
+        }
+
+        model-viewer {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
-    <h1>AR Quick Look</h1>
-    <p>usdz test</p>
+    <h1>AR Viewer</h1>
+    <p>温かみのある料理を3Dで体験しよう</p>
+
+    <!-- iOS用：USDZ -->
     <a rel="ar" href="https://szkxms.github.io/dbsh_colornfc/reality/Applecake.usdz">
-        <img src="ar-icon.png" alt="ARで表示する" style="width:100px;">
+        <div class="button">iOSで表示</div>
     </a>
+
+    <!-- Android/iOS用：GLB -->
+    <model-viewer 
+        src="https://szkxms.github.io/dbsh_colornfc/reality/Applecake.glb" 
+        ios-src="https://szkxms.github.io/dbsh_colornfc/reality/Applecake.usdz"
+        alt="3Dモデルのプレビュー"
+        ar
+        ar-modes="webxr scene-viewer"
+        camera-controls
+        shadow-intensity="1"
+        style="border-radius: 10px; background-color: #ffe0b2;">
+    </model-viewer>
     <p>下のリンクをタップすると、ARで表示できます。</p>
     <a rel="ar" href="https://szkxms.github.io/dbsh_colornfc/reality/Creampuff.json">
         
