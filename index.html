@@ -20,6 +20,11 @@
             color: #d84315;
         }
 
+        h2 {
+            text-align: center;
+            color: #815c51;  
+        }
+
         p {
             text-align: center;
             margin: 10px 0;
@@ -39,7 +44,7 @@
 
         .button {
             display: block;
-            background-color: #ffab91;
+            background-color: rgb(255, 132, 94);
             color: #ffffff;
             padding: 10px 20px;
             margin: 10px auto;
@@ -66,9 +71,11 @@
 <body>
     <h1>AR Viewer</h1>
     <p>料理を3Dで体験しよう</p>
+    <p>右下のボタンを押すとAR表示になります</p>
 
 
     <!-- Apple Cake -->
+    <h2>Applecake</h2>
     <model-viewer 
         src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.glb" 
         ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.usdz"
@@ -81,9 +88,10 @@
     </model-viewer>
 
     <!-- Cleam puff -->
+    <h2>Creampuff</h2>
     <model-viewer 
         src="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.glb" 
-        ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.json"
+        ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.reality"
         alt="3Dモデルのプレビュー"
         ar
         ar-modes="webxr scene-viewer"
