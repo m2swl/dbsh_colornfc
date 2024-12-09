@@ -68,7 +68,7 @@
     <p>料理を3Dで体験しよう</p>
 
 
-    <!-- Android/iOS用：GLB -->
+    <!-- Apple Cake -->
     <model-viewer 
         src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.glb" 
         ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.usdz"
@@ -79,11 +79,18 @@
         shadow-intensity="1"
         style="border-radius: 10px; background-color: #ffe0b2;">
     </model-viewer>
-    <p>下のリンクをタップすると、ARで表示できます。</p>
-    <a rel="ar" href="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.json">
-        
-        <img src="ar-icon.png" alt="ARで表示する" style="width:100px;">
-    </a>
+
+    <!-- Cleam puff -->
+    <model-viewer 
+        src="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.glb" 
+        ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Creampuff.json"
+        alt="3Dモデルのプレビュー"
+        ar
+        ar-modes="webxr scene-viewer"
+        camera-controls
+        shadow-intensity="1"
+        style="border-radius: 10px; background-color: #ffe0b2;">
+    </model-viewer>
     
 </body>
 </html>
