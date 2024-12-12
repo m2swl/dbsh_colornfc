@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Viewer Demo</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.css">
+    <style>
+        body {
+            font-family: 'arial', sans-serif;
+            background-color: #fff8e1;
+            color: #5d4037;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d84315;
+        }
+
+        h2 {
+            text-align: center;
+            color: #815c51;  
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        .button {
+            display: block;
+            background-color: rgb(255, 132, 94);
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 10px auto;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff7043;
+        }
+
+        model-viewer {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demo</h1>
+    <p>右下のボタンを押すとARで表示できます。</p>
+    <p>iPhoneの方は https://www.icloud.com/iclouddrive/005rHtaAZaJ0orDtn2eIgvTBA#Applecake </p>
+
+
+    <!-- Apple Cake -->
+    <h2>Applecake</h2>
+    <model-viewer 
+        src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.glb" 
+        ios-src="https://m2swl.github.io/dbsh_colornfc/reality/Applecake.usdz"
+        alt="3Dモデルのプレビュー"
+        ar
+        ar-modes="webxr scene-viewer"
+        camera-controls
+        shadow-intensity="1"
+        style="border-radius: 10px; background-color: #ffe0b2;">
+    </model-viewer>
+
+</body>
+</html>
